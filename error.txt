@@ -1,0 +1,51 @@
+﻿cargo.exe : error: 
+failed to load 
+manifest for workspace 
+member `C:\Users\Mayank
+\Desktop\Stellar Projec
+ts\subscription-manager
+\contracts\hello-world`
+At line:1 char:1
++ & "$env:USERPROFILE\.
+cargo\bin\cargo" test 
+2>&1 | Out-File 
+-Encoding  ...
++ ~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (error: failed   
+  t...ts\hello-worl    
+d`:String) [], Rem    
+oteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+referenced via 
+`contracts/*` by 
+workspace at `C:\Users\
+Mayank\Desktop\Stellar 
+Projects\subscription-m
+anager\Cargo.toml`
+
+Caused by:
+  failed to parse 
+manifest at `C:\Users\M
+ayank\Desktop\Stellar P
+rojects\subscription-ma
+nager\contracts\hello-w
+orld\Cargo.toml`
+
+Caused by:
+  error inheriting 
+`soroban-sdk` from 
+workspace root 
+manifest's `workspace.d
+ependencies.soroban-sdk
+`
+
+Caused by:
+  `workspace.dependenci
+es` was not defined

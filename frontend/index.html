@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soroban Subscription Manager</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+    </div>
+
+    <div class="container glass-panel">
+        <header>
+            <div class="logo-area">
+                <div class="logo-icon"></div>
+                <h1>Subscription Manager</h1>
+            </div>
+            <button id="connect-wallet" class="btn primary-btn">Connect Wallet</button>
+        </header>
+
+        <main>
+            <div id="content-overlay" class="overlay active">
+                <div class="connect-section">
+                    <div class="input-group">
+                        <label for="contract-id-input">Contract ID</label>
+                        <input type="text" id="contract-id-input" placeholder="Paste deployed Contract ID (C...)" spellcheck="false" autocomplete="off">
+                    </div>
+                    <div class="input-group">
+                        <label for="wallet-address-input">Wallet Address</label>
+                        <input type="text" id="wallet-address-input" placeholder="Paste your Stellar public key (G...)" spellcheck="false" autocomplete="off">
+                    </div>
+                    <button id="submit-wallet" class="btn action-btn">Connect & Enter</button>
+                </div>
+                <div class="divider-text"><span>or use Freighter extension</span></div>
+                <p class="hint-text">Click "Connect Wallet" above if Freighter is installed.</p>
+            </div>
+
+            <div id="dashboard" class="dashboard hidden">
+                <section class="status-card glass-panel">
+                    <h2>Your Status</h2>
+                    <div class="status-indicator">
+                        <span id="activity-dot" class="dot inactive"></span>
+                        <span id="activity-text">Inactive</span>
+                    </div>
+                    <div class="address-display">
+                        <span class="label">Address:</span>
+                        <span id="user-address" class="mono">...</span>
+                    </div>
+                    <div class="expiry-display">
+                        <span class="label">Expires At:</span>
+                        <span id="user-expiry">N/A</span>
+                    </div>
+                </section>
+
+                <section class="action-card glass-panel">
+                    <h2>Manage Subscription</h2>
+                    <p class="subtitle">Extend or activate your subscription using Testnet XLM.</p>
+                    
+                    <form id="subscribe-form">
+                        <div class="form-group">
+                            <label for="duration">Duration</label>
+                            <div class="presets">
+                                <button type="button" class="preset-btn" data-sec="3600">1 Hour</button>
+                                <button type="button" class="preset-btn" data-sec="86400">1 Day</button>
+                                <button type="button" class="preset-btn" data-sec="2592000">30 Days</button>
+                            </div>
+                            <input type="number" id="duration" placeholder="Seconds" required min="1">
+                        </div>
+                        <button type="submit" class="btn action-btn" id="submit-btn">Subscribe Now</button>
+                    </form>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by Stellar Soroban Ecosystem</p>
+            <span id="demo-badge" class="badge warning hidden">Demo Mode Active</span>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stellar-sdk/12.2.0/stellar-sdk.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stellar-freighter-api/1.1.2/index.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

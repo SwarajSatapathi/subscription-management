@@ -1,0 +1,38 @@
+﻿stellar.exe : Γä╣∩╕Å  
+Uploading contract WASMΓÇª
+At line:1 char:1
++ & "$env:USERPROFILE\.cargo\
+bin\stellar" contract deploy 
+--wasm target ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~
+    + CategoryInfo           
+   : NotSpecified: (Γä╣∩╕Å   
+   Uploading contract WASM   
+ ΓÇª:String) [], RemoteEx    
+ception
+    + FullyQualifiedErrorId  
+   : NativeCommandError
+ 
+Γä╣∩╕Å  Simulating 
+transactionΓÇª
+Γ¥î error: transaction 
+simulation failed: 
+HostError: Error(WasmVm, 
+InvalidAction)
+
+Event log (newest first):
+   0: [Diagnostic Event] 
+topics:[error, Error(WasmVm, 
+InvalidAction)], data:"Module
+(Translation(TranslationError
+ { inner: 
+Validate(BinaryReaderError { 
+inner: 
+BinaryReaderErrorInner { 
+message: "reference-types 
+not enabled: zero byte 
+expected", offset: 4189, 
+needed_hint: None } }) }))"
+
