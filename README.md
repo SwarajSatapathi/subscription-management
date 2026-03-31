@@ -1,6 +1,6 @@
 # 🎓 Subscription Manager 🔐
 
-A decentralized subscription system that tracks user access based on time using a Stellar Soroban smart contract. The project includes a sleek, premium frontend web application with demo mode support.
+A decentralized subscription system that tracks user access based on time using a Stellar Soroban smart contract. The project includes a modern Next.js frontend with demo mode support.
 
 ## Deployment Details
 
@@ -10,9 +10,8 @@ A decentralized subscription system that tracks user access based on time using 
 
 ## Dashboard Preview
 
-![Dashboard Active](./dashboard.png)
+![Dashboard Screenshot](./dashboard.png)
 
-*The dashboard showing a successfully connected wallet and an active subscription status on the Stellar Testnet.*
 ---
 
 ## Stellar Labs
@@ -34,7 +33,7 @@ A decentralized subscription system that tracks user access based on time using 
 The project is divided into two main components:
 
 1.  **Smart Contract (`/contracts/subscription`)**: Written in Rust using the Soroban SDK. It handles subscriptions, access validation, and expiration tracking.
-2.  **Frontend (`/frontend`)**: A Web3 frontend (`index.html` + `app.js`) that interacts with the deployed contract on the Soroban Testnet via Freighter wallet.
+2.  **Frontend (`/frontend`)**: A Next.js application that interacts with the deployed contract on the Soroban Testnet via Freighter wallet.
 
 ---
 
@@ -105,8 +104,16 @@ The contract is already deployed to the Stellar Testnet at the address above. To
    ```bash
    cd frontend
    ```
-2. Open `index.html` in a browser directly, or serve it locally.
-3. Supports **Demo Mode** (localStorage) and **Freighter wallet** for live testnet interaction.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+5. Supports **Demo Mode** (localStorage) and **Freighter wallet** for live testnet interaction.
 
 ### Connecting your Wallet
 
