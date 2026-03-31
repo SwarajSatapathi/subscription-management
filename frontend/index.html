@@ -17,10 +17,10 @@
     <div class="container glass-panel">
         <header>
             <div class="logo-area">
-                <div class="logo-icon"></div>
+                <div class="logo-icon" aria-hidden="true"></div>
                 <h1>Subscription Manager</h1>
             </div>
-            <button id="connect-wallet" class="btn primary-btn">Connect Wallet</button>
+            <button id="connect-wallet" class="btn primary-btn" aria-label="Connect Stellar Wallet">Connect Wallet</button>
         </header>
 
         <main>
@@ -37,15 +37,15 @@
                     <button id="submit-wallet" class="btn action-btn">Connect & Enter</button>
                 </div>
                 <div class="divider-text"><span>or use Freighter extension</span></div>
-                <p class="hint-text">Click "Connect Wallet" above if Freighter is installed.</p>
+                <p class="hint-text">Click "Connect Wallet" above if the Freighter extension is installed.</p>
             </div>
 
             <div id="dashboard" class="dashboard hidden">
                 <section class="status-card glass-panel">
                     <h2>Your Status</h2>
                     <div class="status-indicator">
-                        <span id="activity-dot" class="dot inactive"></span>
-                        <span id="activity-text">Inactive</span>
+                        <span id="activity-dot" class="dot inactive" aria-hidden="true"></span>
+                        <span id="activity-text" aria-live="polite">Inactive</span>
                     </div>
                     <div class="address-display">
                         <span class="label">Address:</span>
@@ -71,7 +71,7 @@
                             </div>
                             <input type="number" id="duration" placeholder="Seconds" required min="1">
                         </div>
-                        <button type="submit" class="btn action-btn" id="submit-btn">Subscribe Now</button>
+                        <button type="submit" class="btn action-btn" id="submit-btn" aria-label="Submit Subscription">Subscribe Now</button>
                     </form>
                 </section>
             </div>
@@ -84,7 +84,8 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/stellar-sdk/12.2.0/stellar-sdk.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/stellar-freighter-api/1.1.2/index.min.js"></script>
-    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@stellar/freighter-api@6.0.1/build/index.min.js"></script>
+    <script src="env.js"></script>
+    <script src="app.js?v=2"></script>
 </body>
 </html>

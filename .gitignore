@@ -4,3 +4,9 @@ target
 # Local settings
 .soroban
 .stellar
+
+# env files
+.env
+.env.local
+env.js
+frontend/env.js

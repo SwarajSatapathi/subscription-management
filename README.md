@@ -10,8 +10,9 @@ A decentralized subscription system that tracks user access based on time using 
 
 ## Dashboard Preview
 
-![Dashboard Screenshot](./dashboard.png)
+![Dashboard Active](./dashboard.png)
 
+*The dashboard showing a successfully connected wallet and an active subscription status on the Stellar Testnet.*
 ---
 
 ## Stellar Labs

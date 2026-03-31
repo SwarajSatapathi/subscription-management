@@ -62,16 +62,15 @@ body {
 
 /* Layout Elements */
 .container {
-    zoom: 1.1;
     position: relative;
     z-index: 10;
-    width: 90%;
-    max-width: 600px;
-    padding: 2rem;
-    border-radius: 24px;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    width: 95%;
+    max-width: 650px;
+    padding: 2.5rem;
+    border-radius: 28px;
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.6);
 }
 
 .glass-panel {
@@ -106,6 +105,7 @@ h1 {
     font-weight: 700;
     background: linear-gradient(to right, #f8fafc, #cbd5e1);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -130,6 +130,25 @@ h1 {
     background: var(--primary);
     color: white;
     box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.primary-btn.connected {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--success);
+    border-color: rgba(16, 185, 129, 0.3);
+}
+
+.primary-btn.connected:hover {
+    background: rgba(239, 68, 68, 0.15);
+    color: var(--danger);
+    border-color: var(--danger);
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
+}
+
+.primary-btn.connected:hover::after {
+    content: ' \2715'; /* Multiplication X */
+    font-size: 0.8rem;
+    margin-left: 4px;
 }
 
 .action-btn {
@@ -204,8 +223,16 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 0.5rem;
-    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+}
+
+.label {
+    font-weight: 600;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
 }
 
 /* Form Elements */
@@ -313,10 +340,34 @@ footer {
     font-size: 0.8rem;
 }
 
+.divider-text {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 1.5rem 0;
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.divider-text::before,
+.divider-text::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.divider-text span {
+    padding: 0 12px;
+}
+
 .hint-text {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: var(--text-muted);
     text-align: center;
+    line-height: 1.5;
 }
 
 @media (max-width: 480px) {
